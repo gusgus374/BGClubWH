@@ -30,9 +30,9 @@ if "user" not in st.session_state:
 #if "password" not in st.session_state:
 #     st.session_state.password = None
 
-ROLES = [None,"Coach Gus", "Max", "Edgar", "Gaspar", "Lilly", "Colton", "Ja'zyrion", "Saboji", "Player 8", "Player 9", "Player 10", "Player 11", "Player 12", "Player 13", "Player 14", "Player 15", "Player 16", "Player 17", "Player 18", "Player 19", "Player 20"]
-allroles = ["Coach Gus", "Max", "Edgar", "Gaspar", "Lilly", "Colton", "Ja'zyrion", "Saboji", "Player 8", "Player 9", "Player 10", "Player 11", "Player 12", "Player 13", "Player 14", "Player 15", "Player 16", "Player 17", "Player 18", "Player 19", "Player 20"]
-playersdeployed = ["Coach Gus"]
+ROLES = [None,"Coach Gus", "Max", "Edgar", "Gaspar", "Lilly", "Colton", "Ja'zyrion", "Saboji", "Julian Gowens", "Player 9", "Player 10", "Player 11", "Player 12", "Player 13", "Player 14", "Player 15", "Player 16", "Player 17", "Player 18", "Player 19", "Player 20"]
+allroles = ["Coach Gus", "Max", "Edgar", "Gaspar", "Lilly", "Colton", "Ja'zyrion", "Saboji", "Julian Gowens", "Player 9", "Player 10", "Player 11", "Player 12", "Player 13", "Player 14", "Player 15", "Player 16", "Player 17", "Player 18", "Player 19", "Player 20"]
+playersdeployed = ["Coach Gus", "Saboji"]
 def login():
 
     st.header("Log in")
@@ -80,7 +80,12 @@ prosoccer = st.Page(
     title="Pro Soccer Data",
     icon=":material/sports_and_outdoors:",
 )
-
+saboj = st.Page(
+    "./roster/saiboj.py",
+    title="Saboji's App",
+    icon=":material/sports_and_outdoors:",
+    default=(user == "Saboji")
+)
 account_pages = [logout_page, settings]
 explore_pages = [BootRoom, prosoccer]
 build_pages = [codeBox]
