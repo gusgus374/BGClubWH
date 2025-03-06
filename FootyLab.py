@@ -32,7 +32,7 @@ if "user" not in st.session_state:
 
 ROLES = [None,"Coach Gus", "Max", "Edgar", "Gaspar", "Lilly", "Colton", "Ja'zyrion", "Saboji", "Julian Gowens", "Player 9", "Player 10", "Player 11", "Player 12", "Player 13", "Player 14", "Player 15", "Player 16", "Player 17", "Player 18", "Player 19", "Player 20"]
 allroles = ["Coach Gus", "Max", "Edgar", "Gaspar", "Lilly", "Colton", "Ja'zyrion", "Saboji", "Julian Gowens", "Player 9", "Player 10", "Player 11", "Player 12", "Player 13", "Player 14", "Player 15", "Player 16", "Player 17", "Player 18", "Player 19", "Player 20"]
-playersdeployed = ["Coach Gus", "Saboji"]
+playersdeployed = ["Coach Gus", "Saboji", "Lilly"]
 def login():
 
     st.header("Log in")
@@ -86,10 +86,16 @@ saboj = st.Page(
     icon=":material/sports_and_outdoors:",
     default=(user == "Saboji")
 )
+lilly = st.Page(
+    "./roster/lilly.py",
+    title="Lilly's App",
+    icon=":material/sports_and_outdoors:",
+    default=(user == "Lilly")
+)
 account_pages = [logout_page, settings]
 explore_pages = [BootRoom, prosoccer]
 build_pages = [codeBox]
-deployed_pages = [coachGus, classpage]
+deployed_pages = [coachGus, classpage, lilly, saboj]
 
 page_dict = {}
 
