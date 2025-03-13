@@ -80,6 +80,65 @@ prosoccer = st.Page(
     title="Pro Soccer Data",
     icon=":material/sports_and_outdoors:",
 )
+
+example1 = st.Page(
+    "./coach/example1.py",
+    title="My First Soccer Data App!",
+    icon=":material/school:"
+)
+example2 = st.Page(
+    "./coach/example2.py",
+    title="Soccer Distance Calculator",
+    icon=":material/school:"
+)
+example3 = st.Page(
+    "./coach/example3.py",
+    title="Soccer Speed Converter",
+    icon=":material/school:"
+)
+example4 = st.Page(
+    "./coach/example4.py",
+    title="Soccer Stats Chart Maker",
+    icon=":material/school:"
+)
+
+example5 = st.Page(
+    "./coach/example5.py",
+    title="Sprint Counter",
+    icon=":material/school:"
+)
+
+example6 = st.Page(
+    "./coach/example6.py",
+    title="Soccer Calendar",
+    icon=":material/school:"
+)
+
+example7 = st.Page(
+    "./coach/example7.py",
+    title="Speed and Distance Calculator",
+    icon=":material/school:"
+)
+
+example8 = st.Page(
+    "./coach/example8.py",
+    title="Power Plays Counter",
+    icon=":material/school:"
+)
+
+example9 = st.Page(
+    "./coach/example9.py",
+    title="Acceleration Explorer",
+    icon=":material/school:"
+)
+
+example10 = st.Page(
+    "./coach/example10.py",
+    title="My Soccer Dashboard",
+    icon=":material/school:"
+)
+
+
 saboj = st.Page(
     "./roster/saiboj.py",
     title="Saboji's App",
@@ -95,12 +154,15 @@ lilly = st.Page(
 account_pages = [logout_page, settings]
 explore_pages = [BootRoom, prosoccer]
 build_pages = [codeBox]
+examples_pages = [example1, example2, example3, example4, example5, example6, example7, example8, example9, example10]
 deployed_pages = [coachGus, classpage, lilly, saboj]
 
 page_dict = {}
 
 if (st.session_state.user in allroles):
     page_dict["Create Magic"] = build_pages
+if (st.session_state.user in allroles):
+    page_dict["Examples from Coach"] = examples_pages
 if (st.session_state.user in allroles):
     page_dict["Data Exploration"] = explore_pages
 if (st.session_state.user in allroles):
